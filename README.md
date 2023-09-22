@@ -25,8 +25,6 @@ class TestWorkerViewSet(viewsets.ViewSet):
         return Response(data)
 ```
 
-This might be a related issue https://github.com/django/channels/issues/1302
-
 requirements.txt
 ```
 Django==4.2.1
