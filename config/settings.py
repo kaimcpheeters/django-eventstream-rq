@@ -97,6 +97,8 @@ RQ_QUEUES = {
 
 RQ_SHOW_ADMIN_LINK = True
 
+GRIP_URL = 'http://pushpin:5561'
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
