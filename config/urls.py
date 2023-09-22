@@ -26,4 +26,5 @@ router.register(r'test_worker', views.TestWorkerViewSet, basename='test_worker')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('django-rq/', include('django_rq.urls')),
 ]
