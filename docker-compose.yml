@@ -24,7 +24,7 @@ services:
   pushpin:
     image: fanout/pushpin
     ports:
-      - "8001:80"   # Default port where Pushpin listens for client requests
+      - "7999:7999" # Default port where Pushpin listens for client requests
       - "5561:5561" # Control port for backend services to communicate
     depends_on:
       - main
