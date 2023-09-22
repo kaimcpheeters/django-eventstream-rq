@@ -1,0 +1,23 @@
+version: '3'
+services:
+  main:
+    restart: always
+    build: ./
+    command: >
+      bash -c "python manage.py migrate &&
+               python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./:/workspace
+    ports:
+      - "8000:8000"
+  redis:
+    image: redis:6.2
+  worker:
+    build:
+      context: .
+    volumes:
+      - ./:/workspace
+    command: >
+      sh -c "python manage.py rqworker default"
+    depends_on:
+      - redis
